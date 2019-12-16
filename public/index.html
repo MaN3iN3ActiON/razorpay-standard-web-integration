@@ -39,6 +39,23 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <form action="http://localhost:8081/check-out/pay/success" method="POST">
+<script
+    src="https://checkout.razorpay.com/v1/checkout.js"
+    data-key="rzp_test_JpmhDOoYRY3Vja" // Enter the Key ID generated from the Dashboard
+    data-amount="118000" // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise or INR 500.
+    data-currency="INR"
+    data-order_id="order_DqrvbiGL1iKeMs"//This is a sample Order ID. Create an Order using Orders API. (https://razorpay.com/docs/payment-gateway/orders/integration/#step-1-create-an-order)
+    data-buttontext="Pay with Razorpay"
+    data-name="Whitepanda Media Pvt. Ltd."
+    data-description="A Wild Sheep Chase is the third novel by Japanese author Haruki Murakami"
+    data-image="/whitepanda-logo.png"
+    data-prefill.name="naga Kumar"
+    data-prefill.email="superman@xx.com"
+    data-prefill.contact="9999921476"
+    data-theme.color="#528FF0"
+></script>
+<input type="hidden" custom="Hidden Element" name="hidden">
+</form>
   </body>
 </html>
